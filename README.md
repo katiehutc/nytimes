@@ -1,5 +1,5 @@
 # New York Times Archives Topics Analysis and Visualization
-\
+
 ## Project Overview
 
 This project implements a robust Extract, Transform, Load (ETL) pipeline using **Prefect** to process a large data set of over 400,000 New York Times article headlines and abstracts. The core goal is to identify and visualize major cultural and political trends over the last decade using **BERTopic** for unsupervised topic modeling, ultimately loading the results into a fast **DuckDB** database for interactive analysis via **Streamlit**.
@@ -8,11 +8,9 @@ This project implements a robust Extract, Transform, Load (ETL) pipeline using *
 
 The pipeline consists of three main stages orchestrated by Prefect:
 
+## Technology Stack
 
-
-## 🛠️ Technology Stack
-
-* **Orchestration:** Prefect 2.x (Flows & Tasks)
+* **Orchestration:** Prefect  (Flows & Tasks)
 * **Topic Modeling:** BERTopic (leveraging UMAP, HDBSCAN, and Sentence-BERT)
 * **Data Storage:** DuckDB (In-process analytical database)
 * **Data Analysis:** Pandas
@@ -21,7 +19,7 @@ The pipeline consists of three main stages orchestrated by Prefect:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -31,8 +29,8 @@ You must have **Miniforge** (or Miniconda) installed on your system to manage th
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [(https://github.com/katiehutc/nytimes.git)]
-    cd [nytimes]
+    git clone https://github.com/katiehutc/nytimes.git
+    cd nytimes
     ```
 
 2.  **Create and Activate the Conda Environment:**
@@ -66,3 +64,13 @@ Open your first terminal, ensure `nyt-env` is active, and start the local orches
 
 ```bash
 prefect server start
+```
+
+CD into the src folder, then, run the pipeline file:
+```bash
+python pipeline.py
+```
+
+View the progress of the pipeline on your local server: http://127.0.0.1:4200
+
+The finished file will show up in your folder as nyt_analysis_2.duckdb
