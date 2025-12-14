@@ -74,3 +74,9 @@ python pipeline.py
 View the progress of the pipeline on your local server: http://127.0.0.1:4200
 
 The finished file will show up in your folder as nyt_analysis_2.duckdb
+
+### 2. Run the app
+
+Once the duckdb analysis has been made (could take a few hours), then run the app to see the results using streamlit nyt_app.py
+
+
