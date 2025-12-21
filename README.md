@@ -4,6 +4,8 @@
 
 This project implements an Extract, Transform, Load (ETL) pipeline using **Prefect** to process a data set of over 400,000 New York Times article headlines and abstracts. The core goal of this project is to identify and visualize major cultural and political trends over the last decade using **BERTopic** for unsupervised topic modeling, ultimately loading the results into a fast **DuckDB** database for interactive analysis via **Streamlit**.
 
+**View my documentation and presentation for this project in the repo**
+
 
 ## Technology Stack
 
